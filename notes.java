@@ -47,5 +47,25 @@ Public class Figure2 {
   }
 }
 
+/// int, double, char, boolean(True/False)
+System.out.println(5/3); // 1
+System.out.println(5.0/3); // 1.666667
+System.out.println(5%3); //2 (modulo operator return reminder)
+System.out.println(4%10); //4 (the original num)
+
+
+// for loop
+for (int line=1; line<=5; line++) { //11 22 33 44 55 in each line
+  for (int i=1; i<=5; i++) {
+    System.out.print(line); //use print to print in a line (correspond with second line code)
+  }
+  System.out.println( ); //use println to print in a new line (correspond with first line code)
+}
+for (int line=1; line<=3; line++) { //12345, 12345, 12345 in each line
+  for (int j=5; i>=1; j--) {
+    System.out.println(line);
+  }
+
+
 
 
