@@ -67,5 +67,10 @@ for (int line=1; line<=3; line++) { //12345, 12345, 12345 in each line
   }
 
 
+for (int i=0; i<=9; i++) {
+  for (int j=1; j<=3; j++) {
+    System.out.print(j);
+  System.out.print(i);
+
 
 
