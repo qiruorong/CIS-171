@@ -1,18 +1,27 @@
+METHOD 1: // return value n, can input 0
 public class PowerOf2 {
     public static void main(String[] args) {
-        printPowerOf2(3);
-        System.out.println();
-        printPowerOf2(10);
+        int n = printPowersOf2(3);
     }
-    
-    public static void printPowerOf2(int maxPower) {
-        int power = 0;
-        int result = 1;
-        
-        for (int i = 0; i <= maxPower; i++) {
+    public static int printPowersOf2(int n) {
+        for (int i = 0; i <= n; i++) {
+            int result = (int) Math.pow(2, i); //cast double to int
             System.out.print(result + " ");
-            power++;
-            result = result * 2;
+        }
+        return n;
+    }
+}
+
+
+METHOD 2: // no return, cannot input 0
+public class PowerOf2 {
+    public static void main(String[] args) {
+        printPowersOf2(3);
+    }
+    public static void printPowersOf2(int n) {
+        for (int i = 0; i <= n; i++) {
+            int result = (int) Math.pow(2, i); //cast double to int
+            System.out.print(result + " ");
         }
     }
 }
