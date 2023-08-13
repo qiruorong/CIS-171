@@ -109,7 +109,20 @@ public class StringObject {
     System.out.println(s.toUpperCase); 
     System.out.println(s.toLowerCase);
     
-    
+
+  // scanner input "console"
+  public class CatchUserInput {
+    public static void main (String[] args) {
+      Scanner in = new Scanner (System.in); // in can be changed to console everywhere except the end System.in
+      System.out.print ("Type something");
+      // String s = in.next();
+      // String s = in.nextLine();
+      // double s = in.nextDouble();
+      int s = in.nextInt();
+      System.out.println(s);
+    }
+  }
+      
 
 
 
