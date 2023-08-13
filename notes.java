@@ -125,10 +125,5 @@ public class StringObject {
       
 
 
-
-Chapter 3:
-PowerOf2;
-ProcessName;
-
 Chapter 3g:
 
