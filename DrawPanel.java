@@ -1,4 +1,22 @@
+import java.awt.Graphics;
+import java.awt.Color;
 
+public class DrawPanel{
+   public static void main(String[] args) {
+   DrawingPanel panel = new DrawingPanel(220, 150);
+   Graphics g = panel.getGraphics();
+   g.setColor(Color.BLUE);
+   g.drawOval(50, 25, 40, 40);
+   g.fillOval(50, 25, 40, 40);
+   g.drawOval(130, 25, 40, 40);
+   g.fillOval(130, 25, 40, 40);
+   g.setColor(Color.RED);
+   g.drawRect(70, 45, 80, 80);
+   g.fillRect(70, 45, 80, 80);
+   g.setColor(Color.BLACK);
+   g.drawLine(70, 85, 150, 85);
+   }
+}
 
 
 
@@ -33,3 +51,26 @@ public class DrawLine {
       g.drawLine(x1, y2, x2, y1);
    }
 }
+
+
+
+// multiple patterns
+public class DrawLine {
+   public static void main(String[] args) {
+      DrawingPanel panel = new DrawingPanel(300, 400); // panel range (width, height)
+      Graphics g = panel.getGraphics();
+      // g.drawRect(0,0,50,25);
+      // g.drawRect(50,25,50,25);
+      // g.drawRect(100,50,50,25);
+      // g.drawRect(150,75,50,25);
+      for (int i=0; i<4; i++) {
+         g.drawRect(50*i, 25*i, 50, 25);
+      }
+   }
+
+
+
+      
+
+
+   
