@@ -2,57 +2,49 @@ import java.io.*;
 import java.util.*;
 
 public class FileComparator {
-    public static void main (String[] args) throws FileNotFoundException {
-        System.out.prinln ("This program will add a series of numbers from a file.");
+    public static void main(String[] args) throws FileNotFoundException {
+        System.out.println("This program will compare two files and print the differences.");
         System.out.println();
+
         Scanner console = new Scanner(System.in);
-        System.out.print("What is the file name?");
-        Stirng name = console.nextLine();
-        Scanner input = new Scanner(new File(name));
-        System.out.println();
 
-        int count = 0;
-           
+        System.out.print("Enter the first file name: ");
+        String name1 = console.nextLine();
+        System.out.print("Enter the second file name: ");
+        String name2 = console.nextLine();
 
-            
-                if (!line1.equals(line2)) {
-                    differencesFound = true;
-                    System.out.println("Difference found:");
-                    System.out.println("Line " + lineNum + ":");
-                    System.out.println("< " + line1);
-                    System.out.println("> " + line2);
-                }
-            }
+        Scanner file1 = new Scanner(new File(name1));
+        Scanner file2 = new Scanner(new File(name2));
 
-            // Check for any remaining lines in either file
-            while ((line1 = reader1.readLine()) != null) {
-                lineNum++;
-                differencesFound = true;
-                System.out.println("Difference found:");
-                System.out.println("Line " + lineNum + ":");
+        System.out.println("Differences found:");
+
+        int lineNumber = 1;
+
+        while (file1.hasNextLine() && file2.hasNextLine()) {
+            String line1 = file1.nextLine();
+            String line2 = file2.nextLine();
+
+            if (!line1.equals(line2)) {
+                System.out.println("Line " + lineNumber + ":");
                 System.out.println("< " + line1);
-            }
-
-            while ((line2 = reader2.readLine()) != null) {
-                lineNum++;
-                differencesFound = true;
-                System.out.println("Difference found:");
-                System.out.println("Line " + lineNum + ":");
                 System.out.println("> " + line2);
             }
+            lineNumber++;
+        }
 
-            if (!differencesFound) {
-                System.out.println("No differences found.");
-            }
+        while (file1.hasNextLine()) {
+            System.out.println("Line " + lineNumber + ":");
+            System.out.println("< " + file1.nextLine());
+            lineNumber++;
+        }
 
-        } catch (IOException e) {
-            System.err.println("An error occurred while comparing files: " + e.getMessage());
+        while (file2.hasNextLine()) {
+            System.out.println("Line " + lineNumber + ":");
+            System.out.println("> " + file2.nextLine());
+            lineNumber++;
         }
     }
 }
-
-
-
 
 
 
