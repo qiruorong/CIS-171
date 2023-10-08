@@ -1,20 +1,27 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+import java.util.*;
+public class evenSumMax {
+ 
+public static void main(String[] args) {
+Scanner console = new Scanner(System.in);
+System.out.print("How many numbers do you have? ");
+int totalNumber = console.nextInt();
+int evenSum = 0;
+int evenMax = Integer.MIN_VALUE;
+for (int i = 1; i <= totalNumber; i++) {
+System.out.print("Next Integer? ");
+int num = console.nextInt();
+if (num % 2 == 0) {
+  evenSum += num;
+ if (num > evenMax) {
+   evenMax = num;
+}
+}
+}
+console.close(); 
+System.out.println();
+System.out.print("Even sum = " + evenSum + ", ");
+System.out.println("Even max = " + evenMax);
+ 
 
 
 
