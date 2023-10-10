@@ -1,0 +1,46 @@
+equal to: ==
+not equal to: !=
+if/else:
+  if ( ) {
+  }else{
+  }
+
+while loop:
+  while{
+  ( );
+  ( );
+  }
+
+do{
+  ( );
+}while{
+  ( );
+}
+
+nextInt() # random int between 2^31 - 2^31-1
+nextInt() # random int between 0 and (max-1)
+nextDouble() # random real between 0.0 and 1.0
+nextBoolean() # random true or false
+Random r = new Random()
+
+&&: and
+||: or
+!: NOT
+
+firstWord("all-one-word-here"); # return all-one-word-here
+firstWord(" "); # return ""
+firstWord(" lots of space here") # return lots
+
+file f = new File("halmet.txt")
+scanner input = new scanner (new File(halmet.txt"))
+
+open file with "printStream"
+
+create array:
+double[] temperature = double[3]
+temperature[0] = nextDouble()
+
+Public Point(int x, int y) {
+  this.x = x;
+  this.y = y;
+}
